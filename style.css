@@ -1,6 +1,7 @@
 body {
     /* background-color: #efefef;*/
-    background-color: #9D4799;
+    /* background-color: #9D4799;*/
+    background-image: url('https://raw.githubusercontent.com/gambogi/CSHMembersPortal/master/images/background.png')
 }
 
 .main-container {
@@ -25,6 +26,11 @@ body {
     background-color: #f8f8f8;
 }
 
+.panel-body {
+    background-color: #ccc;
+    border-radius: 3%;
+}
+
 .btn.btn-primary {
     background-color: #9D4799;
 }
@@ -39,10 +45,9 @@ body {
 }
 
 .form-control {
-    background-color: #eee;
+    background-color: #e6e6e6;
 }
 
 .form-control:focus {
-    box-shadow: none;
     background-color: #fff;
 }
