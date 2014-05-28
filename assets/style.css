@@ -3,25 +3,48 @@ html {
 }
 
 body {
-    /* background-color: #efefef;*/
-    background-image: url('https://raw.githubusercontent.com/gambogi/CSHMembersPortal/master/images/background.png');
+    background-image: url('../assets/background.png');
     height: 100%;
 }
 
 .main-container {
-    padding-top: 15px;
-    border-top: 5px solid #E50565;
+    border-top: 5px solid #9D4799;
     display: table;
     height: 100%;
     width: 100%;
 }
 
+.main-content {
+    border-top: 5px solid #E50565;
+}
+
 @media screen and (min-width: 768px) {
     .main-content {
-        display: table-cell; 
+        display: table-cell;
         vertical-align: middle;
         padding-bottom: 100px;
     }
+}
+
+@media screen and (max-width: 767px) {
+    .main-content {
+        padding-top: 15px;
+    }
+}
+
+.csh-logo {
+    width: 150px;
+    margin: 0 auto 15px auto;
+    font-size: 18px;
+    line-height: 1.25em;
+}
+
+.csh-logo img {
+    height: 60px;
+    width: auto;
+    float: left;
+    padding-right: 6px;
+    margin-top: 3px;
 }
 
 .center-text {
@@ -38,7 +61,7 @@ body {
 }
 
 .panel.panel-default {
-    background-color: #f8f8f8;
+    background-color: #f4f4f4;
     border: 1px solid #ccc;
 }
 
@@ -56,7 +79,7 @@ body {
 }
 
 .form-control {
-    background-color: #eee;
+    background-color: #ebebeb;
 }
 
 .form-control:focus {
