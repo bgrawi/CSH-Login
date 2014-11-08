@@ -1,0 +1,126 @@
+/*
+ * CSH-Login Stylesheet
+ * @author Ben Grawi <bgrawi@csh.rit.edu>
+ * @description The global base styles for the login page
+ */
+
+/* GLOBAL LAYOUT */
+
+html, body {
+    height: 100%;
+}
+
+.main-container {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .main-content {
+        display: table-cell;
+        vertical-align: middle;
+        padding-bottom: 80px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .main-content {
+        padding-top: 15px;
+    }
+}
+
+/* ThemeSwitcher Styles */
+
+@media screen and (min-width: 768px) {
+    .ThemeSwitcher-buttons {
+        position: absolute;
+        right: 0;
+        bottom: 5px;
+    }
+    
+    .ThemeSwitcher-buttons .btn {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .ThemeSwitcher-buttons {
+        float: right;
+        margin-right: 15px;
+    }
+}
+
+.ThemeSwitcher-buttons .btn {
+    background: #fff;
+    background: rgba(0, 0, 0, .1);
+}
+
+.ThemeSwitcher-buttons .btn:hover {
+    background: rgba(0, 0, 0, .2);
+}
+
+.ThemeSwitcher-buttons .btn:focus, .ThemeSwitcher-buttons .btn.active {
+    box-shadow: none;
+    background: rgba(0, 0, 0, .3);
+}
+
+.ThemeSwitcher-switching-theme .btn, .ThemeSwitcher-switching-theme .form-control {
+    transition: none !important;
+} 
+
+/* Common Boostrap Styles and default CSH colors */
+
+.btn, .form-control {
+    transition: background-color .25s;
+}
+
+.form-control, .btn, .panel {
+    border-width: 0px;
+    box-shadow: none;
+}
+
+.btn.btn-primary {
+    background-color: #9D4799;
+}
+
+.btn.btn-secondary {
+    color: #fff;
+    background-color: #E50565;
+}
+
+.btn.btn-primary:hover {
+    background-color: #8A4186;
+}
+
+.btn.btn-secondary:hover {
+    color: #fff;
+    background-color: #d10c60;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+/* Base login styles */
+
+.csh-logo {
+    width: 150px;
+    margin: 0 auto 15px auto;
+    font-size: 18px;
+    line-height: 1.25em;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: contain;
+    padding-left: 75px;
+}
+
+.login-panel {
+    border-radius: 6px;
+}
+
+.login-panel .panel-body {
+    padding-bottom: 0px;
+}

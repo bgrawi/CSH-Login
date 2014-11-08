@@ -1,0 +1,47 @@
+/**
+ * CSH-Login Dark Theme
+ * @author Ben Grawi <bgrawi@csh.rit.edu>
+ * @description A simple and clean light theme
+ */
+
+body {
+    background-color: #333;
+    color: #EEE;
+}
+
+.main-container {
+    border-top: 5px solid #9D4799;
+    border-bottom: 5px solid #E50565;
+}
+
+.panel.panel-default {
+    background-color: #555;
+}
+
+.form-control {
+    background-color: #333;
+    color: #EEE;
+}
+
+.form-control:focus {
+    background-color: #444;
+}
+
+.ThemeSwitcher-buttons .btn {
+    color: #EEE;
+    background: #fff;
+    background: rgba(255, 255, 255, .1);
+}
+
+.ThemeSwitcher-buttons .btn:hover {
+    background: rgba(255, 255, 255, .2);
+}
+
+.ThemeSwitcher-buttons .btn:focus, .ThemeSwitcher-buttons .btn.active {
+    box-shadow: none;
+    background: rgba(255, 255, 255, .3);
+}
+
+.csh-logo {
+    background-image: url('../images/CSH_logo_light.svg');
+}
