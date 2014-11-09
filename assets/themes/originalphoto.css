@@ -17,7 +17,7 @@ body {
 }
 
 .login-panel {
-    background-color: rgba(0, 0, 0, .8);
+    background-color: rgba(0, 0, 0, .7);
 	padding-top:10px;
 	padding-left: 20px;
 	padding-right:20px;
@@ -32,13 +32,22 @@ body {
 	padding-right:15px;	
 }	
 }
+.btn.btn-primary{
+
+	background-color:rgba(157,71,153,.8);
+}
+.btn.btn-primary:hover,
+.btn.btn-primary:focus{
+	background-color:rgba(138,65,134,.85);
+	
+}
 .form-control {
-    background-color: #333;
+	background-color: rgba(51, 51, 51, .8);
     color: #EEE;
 }
 
 .form-control:focus {
-    background-color: #444;
+    background-color: rgba(68,68,68, .85);
 }
 
 .ThemeSwitcher-buttons .btn {
