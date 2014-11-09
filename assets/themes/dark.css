@@ -22,13 +22,25 @@ body {
 	padding-bottom:30px;
 	border-radius: 10px;
 }
+@media (min-width:768px){
+.select-style{
+	border: 1px solid #555;
+	color: #EEE;
+	background:#555 url("../images/arrowup-white.png") no-repeat 90% 50%;
+}
+}
 @media (max-width:767px){
 .login-panel{
 	margin:auto;
 	max-width:400px;
 	padding-left:15px;
 	padding-right:15px;	
-}	
+}
+.select-style{
+	border: 1px solid #555;
+	color: #EEE;
+	background:#555 url("../images/arrowdown-white.png") no-repeat 90% 50%;
+}
 }
 .form-control {
     background-color: #333;

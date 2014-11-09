@@ -68,16 +68,19 @@ body {
     background: rgba(255, 255, 255, .3);
 }
 
-@media screen and (min-width: 768px) {
-    .ThemeSwitcher-buttons {
-        transform: translateY(5px);
+@media (min-width: 768px) {
+    .select-style{
+        background: #000 url("../images/arrowup-white.png")  no-repeat 90% 50%;
+		color: #FFF;
+		border-color: #fff;
     }
 }
 
-@media screen and (max-width: 767px) {
-    .ThemeSwitcher-buttons {
-        float: none;
-        margin-top: 200px;
+@media (max-width: 767px) {
+    .select-style {
+        background: #000 url("../images/arrowdown-white.png")  no-repeat 90% 50%;
+		color: #FFF;
+		border-color: #fff;
     }
 }
 
