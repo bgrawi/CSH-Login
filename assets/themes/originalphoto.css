@@ -16,10 +16,22 @@ body {
     border-bottom: 5px solid #E50565;
 }
 
-.panel.panel-default {
+.login-panel {
     background-color: rgba(0, 0, 0, .8);
+	padding-top:10px;
+	padding-left: 20px;
+	padding-right:20px;
+	padding-bottom:30px;
+	border-radius: 10px;
 }
-
+@media (max-width:767px){
+.login-panel{
+	margin:auto;
+	max-width:400px;
+	padding-left:15px;
+	padding-right:15px;	
+}	
+}
 .form-control {
     background-color: #333;
     color: #EEE;

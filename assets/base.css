@@ -48,8 +48,8 @@ html, body {
 
 @media screen and (max-width: 767px) {
     .ThemeSwitcher-buttons {
-        float: right;
-        margin-right: 15px;
+	   margin-top:5px;
+       text-align:center;
     }
 }
 

@@ -13,9 +13,24 @@ body {
     border-bottom: 5px solid #E50565;
 }
 
-.login-panel {
-    background-color: #f4f4f4;
-    border: 1px solid #ccc;
+
+
+.login-panel{
+	background-color:#FAFAFA;	
+	padding-top:10px;
+	padding-left: 20px;
+	padding-right:20px;
+	padding-bottom:30px;
+	border-radius: 10px;
+	border: 1px solid #DEDEDE;
+}
+@media (max-width:767px){
+.login-panel{
+	margin:auto;
+	max-width:400px;
+	padding-left:15px;
+	padding-right:15px;	
+}	
 }
 
 .form-control {
