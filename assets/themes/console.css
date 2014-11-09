@@ -1,0 +1,171 @@
+/**
+ * CSH-Login Dark Theme
+ * @author Ben Grawi <bgrawi@csh.rit.edu>
+ * @description A simple and clean light theme
+ */
+
+body {
+    background-color: #000;
+    color: #FFF;
+    font-family: "Consolas", "Lucida Sans", "Source Code Pro", monospace;
+}
+
+.main-content {
+    display: block;
+}
+
+.main-content > .container {
+    margin-left: 0;
+    width: 100%;
+}
+
+.login-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 0;
+}
+
+.login-panel .form-group {
+    margin: 0;
+}
+
+.panel.panel-default {
+    background-color: #000;
+}
+
+.form-control {
+    background-color: #000;
+    color: #FFF;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.login-content .form-control:before {
+    content: "> ";
+}
+
+.form-control:focus {
+    background-color: #000;
+}
+
+#login_submit {
+    display: none;
+}
+
+.ThemeSwitcher-buttons .btn {
+    color: #EEE;
+    background: #fff;
+    background: rgba(255, 255, 255, .1);
+}
+
+.ThemeSwitcher-buttons .btn:hover {
+    background: rgba(255, 255, 255, .2);
+}
+
+.ThemeSwitcher-buttons .btn:focus, .ThemeSwitcher-buttons .btn.active {
+    box-shadow: none;
+    background: rgba(255, 255, 255, .3);
+}
+
+@media screen and (min-width: 768px) {
+    .ThemeSwitcher-buttons {
+        transform: translateY(5px);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .ThemeSwitcher-buttons {
+        float: none;
+        margin-top: 200px;
+    }
+}
+
+.csh-logo {
+    clear: both;
+    visibility: hidden;
+    height: 5px;
+}
+
+.csh-logo br {
+    display: none;
+}
+
+.login-panel label.sr-only {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip:auto;
+    position: static;
+    float: left;
+    font-weight: normal;
+    padding-right: 10px;
+}
+
+.login-panel label.sr-only::after {
+    content: "> ";
+}
+
+.login-panel .form-horizontal .form-group:nth-child(2) input:focus + span::after {
+    content: "Press enter to continue...";
+}
+
+.login-panel .panel-body:before  {
+    white-space: pre;
+    content: "  _________  __  ______  __  _______________    __________________  ___________  __ ______  __  __________\a  / ___/ __ \\/  |/  / _ \\/ / / /_  __/ __/ _ \\  / __/ ___/  _/ __/ |/ / ___/ __/ / // / __ \\/ / / / __/ __/\a/ /__/ /_/ / /|_/ / ___/ /_/ / / / / _// , _/ _\\ \\/ /___/ // _//    / /__/ _/  / _  / /_/ / /_/ /\\ \\/ _/  \a\\___/\\____/_/  /_/_/   \\____/ /_/ /___/_/|_| /___/\\___/___/___/_/|_/\\___/___/ /_//_/\\____/\\____/___/___/  ";
+}
+
+.main-container {
+    transition: border-bottom-width .25s cubic-bezier(0,0,0.25,1), border-top-width .25s cubic-bezier(0,0,0.25,1);
+}
+
+@media screen and (max-width: 767px) {
+    .login-panel .panel-body:before  {
+        font-size: 7pt;
+        transform: scaleX(.5);
+        margin-left: -25%;
+    }
+}
+
+.login-panel .form-horizontal .form-group {
+    width: auto;
+    padding: auto;
+    float: none;
+    margin: auto;
+}
+
+.login-panel .col-xs-12 {
+    width: auto;
+    padding: 0;
+    float: none;
+    margin: 0;
+    display: inline-block;
+}
+
+.login-panel .input-lg {
+    font-size: inherit;
+    height: auto;
+    min-width: 70%;
+}
+
+.form-control::-webkit-input-placeholder {
+   color: #000;
+}
+
+.form-control::-moz-placeholder {
+   color: #000;  
+}
+
+.form-control:-ms-input-placeholder {  
+   color: #000;  
+}
+
+::selection {
+    background: #FFF;
+    color: #000;
+}
+::-moz-selection {
+    background: #FFF;
+    color: #000;
+}

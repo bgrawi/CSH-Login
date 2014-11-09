@@ -67,14 +67,18 @@ html, body {
     background: rgba(0, 0, 0, .3);
 }
 
-.ThemeSwitcher-switching-theme .btn, .ThemeSwitcher-switching-theme .form-control {
+.ThemeSwitcher-loading .btn, .ThemeSwitcher-loading .form-control, .ThemeSwitcher-loading .panel, body.ThemeSwitcher-loading, .ThemeSwitcher-loading .ThemeSwitcher-buttons, .ThemeSwitcher-loading .main-container {
     transition: none !important;
 } 
 
 /* Common Boostrap Styles and default CSH colors */
 
-.btn, .form-control {
-    transition: background-color .25s;
+body, .btn, .form-control, .panel {
+    transition: background-color .25s cubic-bezier(0,0,0.25,1);
+}
+
+.ThemeSwitcher-buttons {
+    transition: transform .25s;
 }
 
 .form-control, .btn, .panel {

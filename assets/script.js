@@ -79,16 +79,9 @@
     ThemeSwitcher.prototype.updateTheme = function (themeName) {
         if(this.isValidTheme(themeName)) {
             
-            window.document.body.className += ' ThemeSwitcher-switching-theme';
             window.localStorage.setItem('ThemeSwitcher', themeName);
             this.linkElm.setAttribute('href', 
                                       this.baseURL + themeName + '.css');
-            
-            setTimeout(function() {
-                window.document.body.className = 
-                    window.document.body.className
-                .replace( /(?:^|\s)ThemeSwitcher\-switching\-theme(?!\S)/g , '' );
-            }, 100);
         }
     };
     
@@ -119,7 +112,7 @@
     'use strict';
     
     // Add the name of your theme here
-    var themes = ['light', 'dark', 'originalphoto'];
+    var themes = ['light', 'dark', 'originalphoto', 'console'];
     
     // Like $(document).ready(...);
     window.document.addEventListener('DOMContentLoaded', function () {
@@ -152,6 +145,9 @@
             if(themeName !== '') {
                 TS.updateTheme(themeName);
                 updateButtonActiveStates(themeName);
+                
+                // Focus the username field again
+                document.getElementById('login_username').focus();
             }
         }
         
@@ -161,6 +157,12 @@
                 TSselects[index].addEventListener('click', updateThemeButtonEvent);
             }
         }
+        
+        setTimeout(function() {
+            window.document.body.className = 
+                window.document.body.className
+            .replace( /(?:^|\s)ThemeSwitcher\-loading(?!\S)/g , '' );
+        }, 250);
         
         // Make sure the active theme button has an active state
         updateButtonActiveStates(TS.themeName);
