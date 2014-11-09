@@ -64,7 +64,21 @@ body {
     box-shadow: none;
     background: rgba(255, 255, 255, .3);
 }
+@media (max-width:767px){
+.ThemeSwitcher-buttons .btn {
+    color: #EEE;
+    background: #fff;
+    background: rgba(51, 51, 51, .35);
+}
+.ThemeSwitcher-buttons .btn:hover {
+    background: rgba(165,165,165,.35);
+}
 
+.ThemeSwitcher-buttons .btn:focus, .ThemeSwitcher-buttons .btn.active {
+    box-shadow: none;
+    background: rgba(165,165,165,.35);
+}
+}
 .csh-logo {
     background-image: url('../images/CSH_logo_light.svg');
 }
