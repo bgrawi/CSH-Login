@@ -13,7 +13,7 @@
     function ThemeSwitcher(availableThemes, baseURL) {
         
         // Only localStorage implimented
-        if (!window.hasOwnProperty('localStorage')) {
+        if (!('localStorage' in window)) {
             return false;
         }
         
