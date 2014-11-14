@@ -16,13 +16,21 @@ body {
 
 
 .login-panel{
-	background-color:#FAFAFA;	
+	background:#FAFAFA;	
 	padding-top:10px;
 	padding-left: 20px;
 	padding-right:20px;
-	padding-bottom:30px;
+	padding-bottom:10px;
 	border-radius: 10px;
 	border: 1px solid #DEDEDE;
+}
+@media (min-width:768px){
+.select-style{
+	background: #FAFAFA url("../images/arrowup.gif") no-repeat 90% 50%;
+	border: 1px solid #DEDEDE;
+	background:;
+	
+}
 }
 @media (max-width:767px){
 .login-panel{
@@ -31,6 +39,12 @@ body {
 	padding-left:15px;
 	padding-right:15px;	
 }	
+.select-style{
+	background:#FAFAFA url("../images/arrowdown.gif") no-repeat 90% 50%;
+	border: 1px solid #DEDEDE;
+	
+	
+}
 }
 
 .form-control {
@@ -39,6 +53,7 @@ body {
 
 .form-control:focus {
     background-color: #fff;
+	border: 1px solid #ddd;
 }
 
 .csh-logo {

@@ -4,6 +4,11 @@
  * @author Ben Grawi <bgrawi@csh.rit.edu>
  * @description A simple way to switch and store themes for the CSH-Login project
  */
+ 
+ 
+ //find the current selection within the select menu
+
+ 
 (function (window) {
     'use strict';
     
@@ -11,6 +16,8 @@
      * Creates a new ThemeSwitcher object and sets up defaults
      */
     function ThemeSwitcher(availableThemes, baseURL) {
+		
+		
         
         // Only localStorage implimented
         if (!('localStorage' in window)) {
@@ -120,43 +127,13 @@
         // Get all TS Selects
         var TSselects = window.document.querySelectorAll("[data-theme]"),
             TS = new window.ThemeSwitcher(themes, "assets/themes/");
-        
-        /**
-         * Updates the button active states based on the theme name
-         */
-        function updateButtonActiveStates(themeName) {
+			
+		document.getElementById('theme').addEventListener("change",function () {
+			var themeValue = this.options[this.selectedIndex].value;
+			console.log(themeValue);
+			TS.updateTheme(themeValue);
 
-            // Set the active class on to the current active theme now
-            for(var index = 0; index < TSselects.length; index++) {
-                if(themeName === TSselects[index].getAttribute('data-theme')) {
-                    TSselects[index].className += ' active';
-                } else {
-                    TSselects[index].className = TSselects[index].className
-                    .replace( /(?:^|\s)active(?!\S)/g , '' );
-                }
-            }
-        }
-        
-        /**
-         * The function that will bind to the buttons on theme change
-         */
-        function updateThemeButtonEvent() {
-            var themeName = this.getAttribute('data-theme')
-            if(themeName !== '') {
-                TS.updateTheme(themeName);
-                updateButtonActiveStates(themeName);
-                
-                // Focus the username field again
-                document.getElementById('login_username').focus();
-            }
-        }
-        
-        // Add the event listeners for to switch the theme
-        if(TSselects.length > 0) {
-            for(var index = 0; index < TSselects.length; index++) {
-                TSselects[index].addEventListener('click', updateThemeButtonEvent);
-            }
-        }
+		});
         
         setTimeout(function() {
             window.document.body.className = 
@@ -165,6 +142,13 @@
         }, 250);
         
         // Make sure the active theme button has an active state
-        updateButtonActiveStates(TS.themeName);
+        document.getElementById('theme').value = TS.themeName;
+		
+		//Check for Firefox to handle bug with dropdown arrow
+		if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)){ 
+			
+			document.getElementById("theme").style.backgroundImage = "none";
+		
+		}
     });
 }(window));
