@@ -83,7 +83,8 @@ html, body {
 	color:#000;
     background: #FAFAFA;
 	-webkit-appearance: none;
-    -moz-appearance: none;
+  	-moz-appearance: none;
+    -ms-appearance: none;
     appearance: none;
 	
 }
@@ -96,10 +97,17 @@ html, body {
     background: transparent;
     background-image: none;
     -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
 }
 
 .select-style select:focus {
     outline: none;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
 }
 }
 
