@@ -143,5 +143,12 @@
         
         // Make sure the active theme button has an active state
         document.getElementById('theme').value = TS.themeName;
+		
+		//Check for Firefox to handle bug with dropdown arrow
+		if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)){ 
+			
+			document.getElementById("theme").style.backgroundImage = "none";
+		
+		}
     });
 }(window));
