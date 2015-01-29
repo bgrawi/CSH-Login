@@ -16,7 +16,7 @@ body {
 
 
 .login-panel{
-	background:#FAFAFA;	
+	background:rgba(120,120,120,.5);	
 	padding-top:10px;
 	padding-left: 20px;
 	padding-right:20px;
@@ -48,7 +48,7 @@ body {
 }
 
 .form-control {
-    background-color: #ebebeb;
+    background-color: #dbdbdb;
 }
 
 .form-control:focus {
