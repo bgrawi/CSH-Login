@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Computer Science House Members Login</title>
+
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="/assets/bootstrap.min.css">
+		<link rel="stylesheet" href="/assets/base.css">
+		<link rel="stylesheet" href="/assets/themes/light.css" title="theme">
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body class="ThemeSwitcher-loading">
+		<div class="main-container">
+			<div class="main-content">
+				<div class="container">
+					<div class="row">
+						<div class="login-content col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+							<div class="panel panel-default login-panel">
+								<div class="panel-body">
+									<div class="csh-logo">
+										
+										Computer<br> Science<br> House
+									</div>
+									<p><strong>
+									  [% IF err_missinginput %]
+										<!-- This is just the combination of err_username and
+											 err_password if you want only one error message.  We
+											 don't use it. -->
+									  [% END %]
+									  [% IF err_username && err_password %]
+										<!-- Error: no username or password submitted. -->
+										Error: Enter your username and password.
+									  [% ELSIF err_username %]
+										<!-- Error: no username submitted. -->
+										Error: Enter your username.
+									  [% ELSIF err_password %]
+										<!-- Error: no password submitted. -->
+										Error: Enter your password.
+									  [% END %]
+
+									  [% IF err_loginfailed %]
+										<!-- Error: login failed. -->
+										Error: You entered an incorrect username or password (or both).
+									  [% END %]
+
+									  [% IF err_rejected %]
+										<!-- Error: user principal rejected. -->
+										Error: That username may not authenticate to this service.
+									  [% END %]
+
+									  [% IF err_forced %]
+										<!-- Not really an error, forced login. -->
+										This web site requires that you log in with username and
+										password.
+									  [% END %]
+									</strong></p>
+
+									<form name="login" 
+											action="[% script_name FILTER html %]"
+											method="post" autocomplete="OFF"
+											enctype="application/x-www-form-urlencoded"
+											class="form-horizontal" role="form">
+
+										<input type="hidden" name="RT" value="[% RT FILTER html %]" />
+										<input type="hidden" name="ST" value="[% ST FILTER html %]" />
+										<input type="hidden" name="LC" value="[% LC FILTER html %]" />
+										<input type="hidden" name="login" value="yes" />
+
+										<div class="form-group">
+											<label class="sr-only" for="login_username">Username</label>
+											<div class="col-xs-12">
+												<input name="username" value="[% username FILTER html %]" id="login_username" type="text" class="form-control input-lg" placeholder="Username" required autofocus>
+												<span class="messages"></span>
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label class="sr-only" for="login_password">Password</label>
+											<div class="col-xs-12">
+												<input name="password" id="login_password" type="password" class="form-control input-lg" placeholder="Password" required>
+												<span class="messages"></span>
+											</div>
+										</div>
+
+										<div class="form-group">
+											<div class="col-xs-12">
+												<button name="Submit" value="Login" id="login_submit" class="btn btn-lg btn-primary btn-block login-submit" type="submit">Log in</button>
+											</div>
+
+											[% IF error %]
+												<div class="alert alert-error">
+													<strong><a href="#" class="close" data-dismiss="alert">&times;</a>
+													
+													[% IF err_missinginput %]
+													<!-- This is just the combination of err_username and
+														err_password if you want only one error message.  We
+														don't use it. -->
+													[% END %]
+													
+													[% IF err_username && err_password %]
+														<!-- Error: no username or password submitted. -->
+														Error: Enter your username and password.
+													[% ELSIF err_username %]
+														<!-- Error: no username submitted. -->
+														Error: Enter your username.
+													[% ELSIF err_password %]
+														<!-- Error: no password submitted. -->
+														Error: Enter your password.
+													[% END %]
+													
+													[% IF err_loginfailed %]
+														<!-- Error: login failed. -->
+														Error: You entered an incorrect username or password (or both).
+													[% END %]
+													
+													[% IF err_rejected %]
+														<!-- Error: user principal rejected. -->
+														Error: That username may not authenticate to this service.
+													[% END %]
+													
+													[% IF err_forced %]
+														<!-- Not really an error, forced login. -->
+														This web site requires that you log in with username and
+														password.
+													[% END %]
+													</strong>
+												</div>
+											[% END %]
+											[% IF remuser_failed %]
+												<div class="alert alert-error">
+													<a href="#" class="close" data-dismiss="alert">&times;</a>
+													Error: Apache authentication was tried and failed.
+												</div>
+											[% END %]
+
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="selector-container">
+					<select id="theme" class="select-style">
+					  <option value="light">Light</option>
+					  <option value="dark">Dark</option>
+					  <option value="originalphoto">Original Photo</option>
+					  <option value="console">Console</option>
+					</select>
+			</div>
+		</div>
+		<script src="/assets/script.js"></script>
+	</body>
+</html>
