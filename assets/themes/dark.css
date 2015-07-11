@@ -10,8 +10,10 @@ body {
 }
 
 .main-container {
-    border-top: 5px solid #9D4799;
-    border-bottom: 5px solid #E50565;
+	border-top: 5px solid #9D4799;
+	border-bottom: 5px solid #E50565;
+	background-image: url("/assets/images/tile.png");
+	background-repeat: repeat;
 }
 
 .login-panel {

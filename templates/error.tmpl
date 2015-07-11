@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Computer Science House Members Login</title>
+
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="/assets/bootstrap.min.css">
+		<link rel="stylesheet" href="/assets/base.css">
+		<link rel="stylesheet" href="/assets/themes/light.css" title="theme">
+
+	</head>
+	<body class="ThemeSwitcher-loading">
+		<div class="main-container">
+			<div class="main-content">
+				<div class="container">
+					<div class="row">
+						<div class="login-content col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+							<div class="panel panel-default login-panel">
+								<div class="panel-body">
+									<div class="csh-logo">
+										Computer<br> Science<br> House
+									</div>
+
+									<p><strong>The system is unable to log you in.</strong></p>
+									
+									<!-- Error: browser submitted login page via GET -->
+									[% IF err_bad_method %]
+									Error: Login form not properly submitted.<br />
+									Your browser has improperly submitted the login form
+									   via GET instead of POST, which risks exposing your
+									   password in your browser history and to other web sites
+									   you visit.  Please check that your browser is not
+									   misconfigured and you do not use browser plugins that
+									   override proper form handling.
+									[% END %]
+									
+									<!-- Error: cookies disabled in web browser -->
+									[% IF err_cookies_disabled %]
+									Error: You must enable cookies on your web browser.<br />
+									You have just tried to access a web service that is
+									   protected by WebAuth.  However, WebAuth is unable to
+									   tell this web service who you are because your browser
+									   has cookies disabled.<br />
+									WebAuth depends on cookies to communicate with your web
+									   service.  Please enable cookies in your web browser.
+									[% END %]
+									
+									<!-- Error: no response token -->
+									[% IF err_no_request_token %]
+									Error: The URL given is incomplete.
+									[% END %]
+									
+									<!-- Error: missing data when redisplaying the confirm page -->
+									[% IF err_confirm %]
+									Error: Necessary form data was missing.<br />
+									You have probably accessed a stale cached page by
+									   mistake.
+									[% END %]
+									
+									[% IF err_webkdc %]
+									Error: [% err_msg FILTER html %]
+									[% END %]
+									
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="selector-container">
+					<select id="theme" class="select-style">
+					  <option value="light">Light</option>
+					  <option value="dark">Dark</option>
+					  <option value="originalphoto">Original Photo</option>
+					  <option value="console">Console</option>
+					</select>
+			</div>
+		</div>
+		<script src="/assets/script.js"></script>
+	</body>
+</html>

@@ -126,7 +126,7 @@
         
         // Get all TS Selects
         var TSselects = window.document.querySelectorAll("[data-theme]"),
-            TS = new window.ThemeSwitcher(themes, "assets/themes/");
+            TS = new window.ThemeSwitcher(themes, "/assets/themes/");
 			
 		document.getElementById('theme').addEventListener("change",function () {
 			var themeValue = this.options[this.selectedIndex].value;
