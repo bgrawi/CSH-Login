@@ -49,6 +49,7 @@ body {
 
 .form-control {
     background-color: #ebebeb;
+    border: 1px solid transparent;
 }
 
 .form-control:focus {
